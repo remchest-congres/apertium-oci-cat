@@ -3,7 +3,7 @@
 ###############################################################################
 
 LANG1=oci
-LANG1b=oci@aran
+LANG1b=oci_aran
 LANG2=cat
 PREFIX1=$(LANG1)-$(LANG2)
 PREFIX1b=$(LANG1b)-$(LANG2)
@@ -78,7 +78,7 @@ TARGETS_COMMON =		\
 $(PREFIX1).automorf.bin: $(AP_SRC1)/$(LANG1).automorf.bin $(PREFIX1).autobil.bin
 	lt-trim $^ $@
 
-$(PREFIX1b).automorf.bin: $(AP_SRC1)/$(LANG1b).automorf.bin $(PREFIX1b).autobil.bin
+$(PREFIX1b).automorf.bin: $(AP_SRC1)/$(LANG1).automorf.bin $(PREFIX1b).autobil.bin
 	lt-trim $^ $@
 
 # -------------------
@@ -88,7 +88,7 @@ $(PREFIX1b).automorf.bin: $(AP_SRC1)/$(LANG1b).automorf.bin $(PREFIX1b).autobil.
 $(PREFIX2).autogen.bin: $(AP_SRC1)/$(LANG1).autogen.bin
 	cp $< $@
 
-$(PREFIX2b).autogen.bin: $(AP_SRC1)/$(LANG1b).autogen.bin
+$(PREFIX2b).autogen.bin: $(AP_SRC1)/$(LANG1).autogen.bin
 	cp $< $@
 
 # -------------------
@@ -179,32 +179,32 @@ $(PREFIX1).t1x: $(BASENAME).$(PREFIX1).t1x
 	xsltproc --stringparam alt $(LANG1) alt.xsl $(BASENAME).$(PREFIX1).t1x > $@
 	apertium-validate-transfer $@
 
-$(PREFIX1b).t1x: $(BASENAME).$(PREFIX1).t1x
-	xsltproc --stringparam alt $(LANG1b) alt.xsl $(BASENAME).$(PREFIX1).t1x > $@
+$(PREFIX1b).t1x: $(BASENAME).$(PREFIX1b).t1x
+	xsltproc --stringparam alt $(LANG1b) alt.xsl $(BASENAME).$(PREFIX1b).t1x > $@
 	apertium-validate-transfer $@
 
 $(PREFIX2).t1x: $(BASENAME).$(PREFIX2).t1x
 	xsltproc --stringparam alt $(LANG1) alt.xsl $(BASENAME).$(PREFIX2).t1x > $@
 	apertium-validate-transfer $@
 
-$(PREFIX2b).t1x: $(BASENAME).$(PREFIX2).t1x
-	xsltproc --stringparam alt $(LANG1b) alt.xsl $(BASENAME).$(PREFIX2).t1x > $@
+$(PREFIX2b).t1x: $(BASENAME).$(PREFIX2b).t1x
+	xsltproc --stringparam alt $(LANG1b) alt.xsl $(BASENAME).$(PREFIX2b).t1x > $@
 	apertium-validate-transfer $@
 
 $(PREFIX1).t2x: $(BASENAME).$(PREFIX1).t2x
 	xsltproc --stringparam alt $(LANG1) alt.xsl $(BASENAME).$(PREFIX1).t2x > $@
 	apertium-validate-interchunk $@
 
-$(PREFIX1b).t2x: $(BASENAME).$(PREFIX1).t2x
-	xsltproc --stringparam alt $(LANG1b) alt.xsl $(BASENAME).$(PREFIX1).t2x > $@
+$(PREFIX1b).t2x: $(BASENAME).$(PREFIX1b).t2x
+	xsltproc --stringparam alt $(LANG1b) alt.xsl $(BASENAME).$(PREFIX1b).t2x > $@
 	apertium-validate-interchunk $@
 
 $(PREFIX2).t2x: $(BASENAME).$(PREFIX2).t2x
 	xsltproc --stringparam alt $(LANG1) alt.xsl $(BASENAME).$(PREFIX2).t2x > $@
 	apertium-validate-interchunk $@
 
-$(PREFIX2b).t2x: $(BASENAME).$(PREFIX2).t2x
-	xsltproc --stringparam alt $(LANG1b) alt.xsl $(BASENAME).$(PREFIX2).t2x > $@
+$(PREFIX2b).t2x: $(BASENAME).$(PREFIX2b).t2x
+	xsltproc --stringparam alt $(LANG1b) alt.xsl $(BASENAME).$(PREFIX2b).t2x > $@
 	apertium-validate-interchunk $@
 
 $(PREFIX1).t3x: $(BASENAME).$(PREFIX1).t3x
@@ -219,8 +219,8 @@ $(PREFIX2).t3x: $(BASENAME).$(PREFIX2).t3x
 	xsltproc --stringparam alt $(LANG1) alt.xsl $(BASENAME).$(PREFIX2).t3x > $@
 	apertium-validate-postchunk $@
 
-$(PREFIX2b).t3x: $(BASENAME).$(PREFIX2).t3x
-	xsltproc --stringparam alt $(LANG1b) alt.xsl $(BASENAME).$(PREFIX2).t3x > $@
+$(PREFIX2b).t3x: $(BASENAME).$(PREFIX2b).t3x
+	xsltproc --stringparam alt $(LANG1b) alt.xsl $(BASENAME).$(PREFIX2b).t3x > $@
 	apertium-validate-postchunk $@
 
 $(PREFIX1).t1x.bin: $(PREFIX1).t1x
@@ -269,7 +269,7 @@ $(PREFIX1).autopgen.bin: $(AP_SRC2)/$(LANG2).autopgen.bin
 $(PREFIX2).autopgen.bin: $(AP_SRC1)/$(LANG1).autopgen.bin
 	cp $< $@
 
-$(PREFIX2b).autopgen.bin: $(AP_SRC1)/$(LANG1b).autopgen.bin
+$(PREFIX2b).autopgen.bin: $(AP_SRC1)/$(LANG1).autopgen.bin
 	cp $< $@
 
 ###############################################################################

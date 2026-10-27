@@ -63,16 +63,16 @@
         <file name="cat-oci@aran.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
-        <file name="cat-oci@aran.t1x"/>
-        <file name="cat-oci@aran.t1x.bin"/>
+        <file name="cat-oci_aran.t1x"/>
+        <file name="cat-oci_aran.t1x.bin"/>
       </program>
       <program name="apertium-interchunk">
-        <file name="cat-oci@aran.t2x"/>
-        <file name="cat-oci@aran.t2x.bin"/>
+        <file name="cat-oci_aran.t2x"/>
+        <file name="cat-oci_aran.t2x.bin"/>
       </program>
       <program name="apertium-postchunk">
-        <file name="cat-oci@aran.t3x"/>
-        <file name="cat-oci@aran.t3x.bin"/>
+        <file name="cat-oci_aran.t3x"/>
+        <file name="cat-oci_aran.t3x.bin"/>
       </program>
       <program name="lt-proc $1">
         <file name="cat-oci@aran.autogen.bin"/>
@@ -148,16 +148,16 @@
         <file name="oci-cat.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
-        <file name="oci@aran-cat.t1x"/>
-        <file name="oci@aran-cat.t1x.bin"/>
+        <file name="oci_aran-cat.t1x"/>
+        <file name="oci_aran-cat.t1x.bin"/>
       </program>
       <program name="apertium-interchunk">
-        <file name="oci@aran-cat.t2x"/>
-        <file name="oci@aran-cat.t2x.bin"/>
+        <file name="oci_aran-cat.t2x"/>
+        <file name="oci_aran-cat.t2x.bin"/>
       </program>
       <program name="apertium-postchunk">
-        <file name="oci@aran-cat.t3x"/>
-        <file name="oci@aran-cat.t3x.bin"/>
+        <file name="oci_aran-cat.t3x"/>
+        <file name="oci_aran-cat.t3x.bin"/>
       </program>
       <program name="lt-proc $1 -b">
         <file name="oci-cat.autogen.bin"/>
